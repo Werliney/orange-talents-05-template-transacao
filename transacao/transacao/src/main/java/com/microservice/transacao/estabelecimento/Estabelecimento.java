@@ -18,9 +18,21 @@ public class Estabelecimento {
     public Estabelecimento() {
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getCidade() {
+        return cidade;
+    }
+
+    public String getEndereco() {
+        return endereco;
+    }
+
     public Estabelecimento(String nome, String cidade, String endereco) {
-        this.id = id;
         this.nome = nome;
+        this.cidade = cidade;
         this.endereco = endereco;
     }
 }

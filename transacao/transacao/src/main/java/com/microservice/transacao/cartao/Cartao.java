@@ -14,6 +14,14 @@ public class Cartao {
     public Cartao() {
     }
 
+    public UUID getId() {
+        return id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public Cartao(String id, String email) {
         this.id = UUID.fromString(id);
         this.email = email;

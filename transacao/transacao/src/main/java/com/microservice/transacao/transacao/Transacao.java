@@ -28,6 +28,25 @@ public class Transacao {
     public Transacao() {
     }
 
+    public Cartao getCartao() {
+        return cartao;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public BigDecimal getValor() {
+        return valor;
+    }
+
+    public LocalDate getEfetivadaEm() {
+        return efetivadaEm;
+    }
+
+    public Estabelecimento getEstabelecimento() {
+        return estabelecimento;
+    }
 
     public Transacao(String id, BigDecimal valor, Estabelecimento estabelecimento, Cartao cartao, LocalDate efetivadaEm) {
         this.id = UUID.fromString(id);
