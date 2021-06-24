@@ -1,14 +1,10 @@
 package com.microservice.transacao.estabelecimento;
 
-import javax.validation.constraints.NotBlank;
-
 public class EstabelecimentoResponse {
 
-    @NotBlank
+
     private String nome;
-    @NotBlank
     private String cidade;
-    @NotBlank
     private String endereco;
 
     public EstabelecimentoResponse() {

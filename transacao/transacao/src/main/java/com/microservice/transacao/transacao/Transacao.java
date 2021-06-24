@@ -3,10 +3,10 @@ package com.microservice.transacao.transacao;
 import com.microservice.transacao.cartao.Cartao;
 import com.microservice.transacao.estabelecimento.Estabelecimento;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.OneToOne;
-import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.UUID;
@@ -16,14 +16,13 @@ public class Transacao {
 
     @Id
     private UUID id;
-    @Positive
     private BigDecimal valor;
     private LocalDate efetivadaEm;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Estabelecimento estabelecimento;
 
-    @OneToOne
+    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private Cartao cartao;
 
     public Transacao() {

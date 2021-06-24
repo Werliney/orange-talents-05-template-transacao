@@ -3,13 +3,11 @@ package com.microservice.transacao.transacao;
 import com.microservice.transacao.cartao.CartaoResponse;
 import com.microservice.transacao.estabelecimento.EstabelecimentoResponse;
 
-import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public class EventoDeTransacao {
 
-    @NotBlank
     private String id;
     private BigDecimal valor;
     private EstabelecimentoResponse estabelecimento;
